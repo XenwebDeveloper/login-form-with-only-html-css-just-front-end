@@ -11,3 +11,5 @@ This project features a minimalist layout, stylish input fields, a password fiel
 * Styled input fields
 * Clean typography and spacing
 * No JavaScript or backend functionality
+
+![Uploading image.png…]()
