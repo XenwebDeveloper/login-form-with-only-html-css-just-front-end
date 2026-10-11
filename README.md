@@ -13,3 +13,5 @@ This project features a minimalist layout, stylish input fields, a password fiel
 * No JavaScript or backend functionality
 
 ![Uploading image.png…]()
+
+![Uploading image.png…]()
