@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XenWeb Login Page | XenWeb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section>
+        <div class="form-wrapper">
+            <div class="form-picture">
+
+                <img src="1.jpg" alt="" class="loginPagePicture">
+                <img src="2.jpg" alt="" class="loginPagePicture">
+                <script>
+                    var slideIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("loginPagePicture");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > x.length) {slideIndex = 1}
+                    x[slideIndex-1].style.display = "block";
+                    setTimeout(carousel, 20000);// Change image every 2 seconds
+                    }
+                </script>
+
+                <div class="QRcode">
+                    <img src="newpage-tr.png" alt="">
+                    <div>
+                        <h5>Download my app</h5>
+                        <h6>Lorem ipsum dolor sit.</h6>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-field">
+                <h2><span>Welcome</span> back</h2>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.Aspernatur dolores</h3>
+                <form action="#">
+                    <div class="form-control">
+                        <input type="text" required>
+                        <label>Email or phone number</label>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit">Login To Get More Content</button>
+                    <div class="form-help"> 
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#">Need help?</a>
+                    </div>
+                </form>
+                <p>New to XenWeb? <a href="#">Sign up now</a></p>
+                <small>
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+                    <a href="#">Learn more.</a>
+                </small>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

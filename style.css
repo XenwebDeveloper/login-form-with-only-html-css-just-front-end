@@ -1,0 +1,424 @@
+:root {
+    --hover: #b8002e;
+    --glow-hover: #bb002f;
+    --text: #ffffff;
+    --gray-text: #808080;
+    --border: #2c2c2c;
+    --input: #111111;
+    --shadow: #00000034;
+}
+
+/*=================*/
+
+@font-face {
+    font-family: productSans-1;
+    src: url(fonts/productSans/ProductSans-Black.eot);
+    src: url(fonts/productSans/ProductSans-Black.ttf);
+    src: url(fonts/productSans/ProductSans-Black.woff);
+    src: url(fonts/productSans/ProductSans-Black.woff2);
+}
+
+@font-face {
+    font-family: productSans-2;
+    src: url(fonts/productSans/ProductSans-Bold.eot);
+    src: url(fonts/productSans/ProductSans-Bold.ttf);
+    src: url(fonts/productSans/ProductSans-Bold.woff);
+    src: url(fonts/productSans/ProductSans-Bold.woff2);
+}
+
+@font-face {
+    font-family: productSans-3;
+    src: url(fonts/productSans/ProductSans-Medium.eot);
+    src: url(fonts/productSans/ProductSans-Medium.ttf);
+    src: url(fonts/productSans/ProductSans-Medium.woff);
+    src: url(fonts/productSans/ProductSans-Medium.woff2);
+}
+
+@font-face {
+    font-family: productSans-4;
+    src: url(fonts/productSans/ProductSans-Regular.eot);
+    src: url(fonts/productSans/ProductSans-Regular.ttf);
+    src: url(fonts/productSans/ProductSans-Regular.woff);
+    src: url(fonts/productSans/ProductSans-Regular.woff2);
+}
+
+@font-face {
+    font-family: productSans-5;
+    src: url(fonts/productSans/ProductSans-Light.eot);
+    src: url(fonts/productSans/ProductSans-Light.ttf);
+    src: url(fonts/productSans/ProductSans-Light.woff);
+    src: url(fonts/productSans/ProductSans-Light.woff2);
+}
+
+@font-face {
+    font-family: productSans-6;
+    src: url(fonts/productSans/ProductSans-Thin.eot);
+    src: url(fonts/productSans/ProductSans-Thin.ttf);
+    src: url(fonts/productSans/ProductSans-Thin.woff);
+    src: url(fonts/productSans/ProductSans-Thin.woff2);
+}
+
+/*=================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: googlikME;
+}
+
+body {
+    background: black;
+}
+
+::selection {
+    color: var(--text);
+    background: var(--hover);
+}
+
+
+/*=================*/
+
+.form-wrapper {
+    position: absolute;
+    width: 1200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    filter: drop-shadow(0px 10px 50px var(--shadow));
+    background: linear-gradient(90deg, #101010, #250808 100%);
+    overflow: hidden;
+}
+
+.form-wrapper h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    color: var(--text);
+    font-family: productSans-1;
+}
+
+.form-wrapper h3 {
+    padding-top: 10px;
+
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--gray-text);
+    font-family: productSans-3;
+}
+
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+
+form .form-control {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+
+    color: var(--text);
+    background: var(--input);
+    border: none;
+    outline: none;
+    border: 2px solid var(--border);
+    border-radius: 15px;
+
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+}
+
+.form-control input:is(:focus, :valid) {
+    padding: 16px 20px 0;
+    border: 2px solid var(--hover);
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--gray-text);
+
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+
+    pointer-events: none;
+
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    font-weight: 100;
+    transform: translateY(-100%);
+}
+
+/*=================*/
+
+form button {
+    width: 100%;
+    padding: 15px 0;
+    margin: 25px 0 10px;
+
+    border: 2px solid var(--hover);
+    border-radius: 15px;
+    outline: none;
+    background: var(--hover);
+    filter: drop-shadow(0px 0px 80px var(--glow-hover));
+
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    color: var(--hover);
+    background: transparent;
+    border: 2px solid var(--hover);
+    filter: drop-shadow(0px 0px 30px var(--glow-hover));
+}
+
+/*=================*/
+
+.form-wrapper a {
+    color: var(--gray-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+}
+
+.form-wrapper a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+}
+
+.form-wrapper :where(label, p, small, a) {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+}
+
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .remember-me {
+    display: flex;
+}
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: var(--gray-text);
+}
+
+form .form-help :where(label, a) {
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-3;
+    color: var(--gray-text);
+}
+
+.form-wrapper p a {
+    color: var(--text);
+}
+
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+    color: var(--gray-text);
+}
+
+.form-wrapper small a {
+    color: var(--glow-hover);
+}
+
+/*=================*/
+
+.form-picture {
+    position: relative;
+    float: right;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.form-field {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 70px 100px;
+    text-align: center;
+}
+
+.form-field span {
+    color: var(--text);
+    font-size: 2rem;
+    font-family: productSans-1;
+}
+
+.form-picture img {
+    width: 600px;
+    float: right;
+}
+
+.QRcode {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    display: flex;
+    gap: 15%;
+    margin-bottom: 35px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #181818;
+    box-shadow: 0px 10px 25px #0000003d;
+    align-items: center;
+    justify-content: center;
+}
+
+.QRcode img {
+    width: 50px;
+    float: left;
+    border-radius: 10px;
+    filter: invert(1);
+}
+
+.QRcode div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.QRcode div h5 {
+    color: var(--text);
+    font-size: 1.65rem;
+    font-weight: 100;
+    font-family: productSans-1;
+}
+
+.QRcode div h6 {
+    color: var(--gray-text);
+    font-size: 1rem;
+    font-weight: 100;
+    font-family: productSans-1;
+}
+
+/*=================*/
+
+@media (max-width: 1220px) {
+
+    .form-wrapper {
+        position: absolute;
+        width: 800px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+
+        border: 2px solid var(--border);
+        border-radius: 20px;
+        filter: drop-shadow(0px 10px 50px var(--shadow));
+        background: linear-gradient(90deg, #101010, #250808 100%);
+        overflow: hidden;
+    }
+
+    .form-picture {
+        position: absolute;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        z-index: -1;
+    }
+
+    .form-picture img {
+        width: 806px;
+        filter: blur(8px) brightness(20%);
+    }
+
+    .form-field span {
+        color: var(--text);
+        font-size: 2rem;
+        font-family: productSans-1;
+    }
+
+    .QRcode {
+        display: none;
+    }
+
+}
+
+/*=================*/
+
+@media (max-width: 850px) {
+
+    .form-wrapper {
+        width: 95%;
+        top: 50%;
+        filter: drop-shadow(0 0 400px #ff00004d);
+    }
+
+    .form-field {
+        width: 100%;
+        height: auto;
+        float: left;
+        padding: 70px 30px;
+        text-align: center;
+    }
+
+    .form-field span {
+        color: var(--hover);
+        font-size: 2rem;
+        font-family: productSans-1;
+    }
+
+    .form-wrapper form {
+        margin: 50px 0 40px;
+    }
+
+    .form-picture img {
+        width: 806px;
+        filter: blur(15px) brightness(20%);
+    }
+}
