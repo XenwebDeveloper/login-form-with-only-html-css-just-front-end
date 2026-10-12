@@ -12,4 +12,4 @@ This project features a minimalist layout, stylish input fields, a password fiel
 * Clean typography and spacing
 * No JavaScript or backend functionality
 
-[](screenshot.png)
+[ghjghj](screenshot.png)
