@@ -12,4 +12,4 @@ This project features a minimalist layout, stylish input fields, a password fiel
 * Clean typography and spacing
 * No JavaScript or backend functionality
 
-[](screenshot.png)
+<img width="1589" height="1109" alt="screenshot" src="https://github.com/user-attachments/assets/a7c25eac-ab11-4fba-8de1-7f8082b96932" />
