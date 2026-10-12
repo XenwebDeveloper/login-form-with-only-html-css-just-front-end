@@ -12,4 +12,4 @@ This project features a minimalist layout, stylish input fields, a password fiel
 * Clean typography and spacing
 * No JavaScript or backend functionality
 
-![Uploading Screenshot 2026-10-11 222037.png…]()
+[](screenshot.png)
